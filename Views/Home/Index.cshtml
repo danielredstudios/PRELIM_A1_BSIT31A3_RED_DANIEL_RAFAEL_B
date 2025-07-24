@@ -1,0 +1,117 @@
+﻿@using PRELIM_A1_BSIT31A3_RED_DANIEL_RAFAEL_B.Models
+@{
+    ViewData["Title"] = "Student List";
+
+    var students = new List<Student>
+    {
+        new Student("Daniel Rafael", "Red")
+        {
+            Title = "Mr.",
+            Course = "BSIT",
+            Section = "31A3",
+            Birthday = new DateTime(2004, 3, 10)
+        },
+        new Student("Ericson", "Anuran")
+        {
+            Title = "Mr.",
+            Course = "BSIT",
+            Section = "31A3",
+            Birthday = new DateTime(2003, 7, 25)
+        },
+        new Student("Xyrylle Claire", "Matiga")
+        {
+            Title = "Ms.",
+            Course = "BSIT",
+            Section = "31A3",
+            Birthday = new DateTime(2004, 1, 5)
+        },
+        new Student("Rymark", "Guardian")
+        {
+            Title = "Mr.",
+            Course = "BSIT",
+            Section = "31A3",
+            Birthday = new DateTime(2003, 9, 12)
+        },
+        new Student("Vyance Gabrielle", "Young")
+        {
+            Title = "Ms.",
+            Course = "BSIT",
+            Section = "31A3",
+            Birthday = new DateTime(2004, 11, 3)
+        },
+        new Student("Regina Angela", "Ramones")
+        {
+            Title = "Ms.",
+            Course = "BSIT",
+            Section = "31A3",
+            Birthday = new DateTime(2003, 2, 28)
+        },
+        new Student("John Niño", "Miranda")
+        {
+            Title = "Mr.",
+            Course = "BSIT",
+            Section = "31A3",
+            Birthday = new DateTime(2004, 6, 17)
+        },
+        new Student("Rachelle Anne", "Lucban")
+        {
+            Title = "Ms.",
+            Course = "BSIT",
+            Section = "31A3",
+            Birthday = new DateTime(2003, 10, 8)
+        },
+        new Student("Ronnel John", "Vicente")
+        {
+            Title = "Mr.",
+            Course = "BSIT",
+            Section = "31A3",
+            Birthday = new DateTime(2004, 12, 1)
+        },
+        new Student("Francine Mei", "Obis")
+        {
+            Title = "Ms.",
+            Course = "BSIT",
+            Section = "31A3",
+            Birthday = new DateTime(2003, 4, 20)
+        }
+    };
+
+    students[0].SetGender(Gender.Male);
+    students[1].SetGender(Gender.Male);
+    students[2].SetGender(Gender.Female);
+    students[3].SetGender(Gender.Male);
+    students[4].SetGender(Gender.Female);
+    students[5].SetGender(Gender.Female);
+    students[6].SetGender(Gender.Male);
+    students[7].SetGender(Gender.Female);
+    students[8].SetGender(Gender.Male);
+    students[9].SetGender(Gender.Female);
+}
+
+<h1>Student Roster</h1>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Full Name</th>
+            <th>Gender</th>
+            <th>Course</th>
+            <th>Section</th>
+            <th>Birthday</th>
+            <th>Age</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var student in students)
+        {
+            <tr>
+                <td>@student.FullName</td>
+                <td>@student.Gender</td>
+                <td>@student.Course</td>
+                <td>@student.Section</td>
+                <td>@student.Birthday.ToString("yyyy-MM-dd")</td>
+                <td>@student.Age</td>
+            </tr>
+        }
+    </tbody>
+</table>
