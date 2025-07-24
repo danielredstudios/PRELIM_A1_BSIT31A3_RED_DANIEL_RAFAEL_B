@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "PRELIM_A1_BSIT31A3_RED_DANIEL_RAFAEL_B/1.0.0": {
+        "runtime": {
+          "PRELIM_A1_BSIT31A3_RED_DANIEL_RAFAEL_B.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PRELIM_A1_BSIT31A3_RED_DANIEL_RAFAEL_B/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
